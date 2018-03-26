@@ -11,6 +11,7 @@ class SideloadableRelationsMixin(object):
     relation_names = []
 
     def __init__(self, **kwargs):
+        super(SideloadableRelationsMixin, self).__init__(**kwargs)
         if not hasattr(self, 'sideloadable_relations'):
             raise Exception("define `sideloadable_relations` class variable, while using `SideloadableRelationsMixin`")
         self.primary_object_name = self.get_primary_relation_name()
