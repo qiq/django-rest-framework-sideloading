@@ -13,7 +13,7 @@ To use latest version of cloned library export parent directory
 
 Or install desired release using pip
 
-    pip install drf-sideloading==0.1.7
+    pip install drf-sideloading==0.1.10
 
 
 ## setup using script

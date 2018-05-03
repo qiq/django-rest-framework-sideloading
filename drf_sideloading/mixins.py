@@ -71,7 +71,7 @@ class SideloadableRelationsMixin(object):
         """
         relation_names = sideload_relations.split(',')
         self.relation_names = \
-            (set(relation_names) & set(self.sideloadable_relations.keys())) - set([self.primary_object_name])
+            (set(relation_names) & set(self.sideloadable_relations.keys())) - {self.primary_object_name}
         return relation_names
 
     def get_sideloadable_page_from_queryset(self, queryset):
